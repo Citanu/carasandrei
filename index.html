@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FRYDAY | Prăjim pe bune</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <div class="logo">FRYDAY.</div>
+        <nav>
+            <ul id="nav-links">
+                <li><a href="#acasa">Acasă</a></li>
+                <li><a href="#descriere-generala">Prezentare</a></li>
+                <li><a href="#despre-fryday-detalii">Despre FRYDAY</a></li>
+                <li><a href="#despre-brand">Viziune</a></li>
+                <li><a href="#fondator">Fondator</a></li>
+                <li><a href="#proiect">Galerie Proiect</a></li>
+                <li><a href="#drive-thru">Drive Thru</a></li>
+                <li><a href="#facilitati">Facilități</a></li>
+                <li><a href="#despre-noi">Despre Noi</a></li>
+            </ul>
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section id="acasa" class="hero">
+            <div class="hero-overlay">
+                <h1>100% MESSY. 100% GUSTOS.</h1>
+                <p>Descoperă povestea și experiența FRYDAY: burgeri în stil american, cartofi prăjiți în ulei de alune și un vibe inconfundabil care a cucerit România.</p>
+            </div>
+        </section>
+
+        <section id="descriere-generala" class="container">
+            <div class="descriere-box">
+                <h2>Ce este fenomenul FRYDAY?</h2>
+                <p>Fondat în anul 2019 la Suceava, FRYDAY a apărut pe piața românească din dorința de a sparge tiparele clasice ale restaurantelor de tip fast-food și de a concura direct cu marile lanțuri internaționale. Brandul s-a remarcat rapid printr-o identitate vizuală extrem de puternică, o comunicare curajoasă și, mai ales, prin calitatea superioară a ingredientelor folosite în prepararea meniului.</p>
+                
+                <div class="text-center" style="margin-top: 30px;">
+                    <a href="#despre-fryday-detalii" class="btn-despre">Află mai multe despre FRYDAY</a>
+                </div>
+            </div>
+        </section>
+
+        <section id="despre-fryday-detalii" class="container bg-gri">
+            <div class="brand-descriere-detaliata">
+                <h2>Povestea Brandului FRYDAY</h2>
+                <div class="text-box-brand">
+                    <p>În doar câțiva ani de la lansare, conceptul FRYDAY s-a transformat într-un adevărat fenomen la nivel național. Brandul s-a extins rapid în centre comerciale majore și locații stradale de tip Drive-Thru din orașe de referință precum București, Iași, Craiova, Oradea, Arad, Alba Iulia și Timișoara. Restaurantele sunt recunoscute pentru designul lor modern, complet digitalizat prin kioskuri de comandă rapidă, atmosferă dinamică și un flux de servire impecabil.</p>
+                    <p>Secretul din spatele succesului constă în atenția obsesivă pentru detalii și în dorința de a nu face compromisuri de la calitate. De la carnea de vită proaspătă și sosurile dezvoltate după rețete proprii, până la faimoșii cartofi prăjiți exclusiv în ulei de alune, brandul oferă o alternativă superioară pe piața din România. FRYDAY nu este doar un loc unde mănânci rapid, ci o destinație culinară care oferă o experiență gastronomică premium, accesibilă oricui.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="despre-brand" class="container text-center">
+            <h2>Conceptul Restaurantului</h2>
+            <p class="subtitlu">Apasă pe taburile de mai jos pentru a descoperi conceptul restaurantului:</p>
+            
+            <div class="tabs-prezentare">
+                <button class="tab-btn active" onclick="schimbaTab(event, 'misiune')">Misiune</button>
+                <button class="tab-btn" onclick="schimbaTab(event, 'valori')">Valori</button>
+                <button class="tab-btn" onclick="schimbaTab(event, 'specific')">Specific</button>
+            </div>
+
+            <div id="misiune" class="tab-continut active">
+                <p>Misiunea FRYDAY este de a revoluționa piața de fast-food din România prin extinderea unui lanț de restaurante modern, axat pe calitate premium și servire rapidă. Brandul își propune să ofere clienților o alternativă autentică la rețetele clasice americane, păstrând standarde riguroase în fiecare locație sau linie Drive-Thru.</p>
+            </div>
+            <div id="valori" class="tab-continut">
+                <p>Sinceritate în fața clientului, gust intens și transparență absolută. Lanțul FRYDAY nu se ferește de un preparat „messy" – pentru că un gust cu adevărat bogat se savurează din plin, fără bariere.</p>
+            </div>
+            <div id="specific" class="tab-continut">
+                <p>FRYDAY se diferențiază pe piață fiind primul lanț de restaurante din România care folosește exclusiv ulei de alune pur pentru prăjirea cartofilor, oferindu-le o textură crocantă unică și reducând absorbția de grăsimi.</p>
+            </div>
+        </section>
+
+        <section id="fondator" class="container bg-gri">
+            <div class="fondator-flex">
+                <div class="fondator-text">
+                    <h2>Omul din spatele succesului</h2>
+                    <h3>Lucian Florea – Fondator FRYDAY</h3>
+                    <p>Antreprenorul sucevean Lucian Florea a lansat conceptul FRYDAY din dorința de a demonstra că un brand românesc de fast-food se poate bate de la egal la egal cu marile francize internaționale. Pornind de la o idee curajoasă, acesta a transformat pasiunea pentru gastronomie și rigoare într-un business de succes cu extindere rapidă la nivel național.</p>
+                    <blockquote>
+                        "În business nu contează doar să vinzi, ci să creezi o emoție, un ritual. La FRYDAY nu vindem doar mâncare, vindem o experiență premium accesibilă tuturor."
+                    </blockquote>
+                </div>
+                <div class="fondator-imagine-box">
+                    <img src="imagini/fondator.jpg" alt="Lucian Florea - Fondator FRYDAY" class="img-fondator-src">
+                </div>
+            </div>
+        </section>
+
+        <section id="proiect" class="container">
+            <h2>Galerie Imagini</h2>
+            <div class="grid-imagini">
+                <div class="card-imagine">
+                    <img src="imagini/meniu.jpeg" alt="Meniu Fryday">
+                    <div class="info-imagine">
+                        <h3>Meniul Perfect</h3>
+                    </div>
+                </div>
+                
+                <div class="card-imagine">
+                    <img src="imagini/fatada.jpeg" alt="Exterior Fryday">
+                    <div class="info-imagine">
+                        <h3>Fațada Restaurantului</h3>
+                    </div>
+                </div>
+                
+                <div class="card-imagine">
+                    <img src="imagini/interior.jpeg" alt="Interior Fryday">
+                    <div class="info-imagine">
+                        <h3>Interior Restaurant</h3>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="drive-thru" class="container bg-gri">
+            <h2>Experiența Drive-Thru</h2>
+            <p>Pentru clienții aflați în mișcare, restaurantele FRYDAY pun la dispoziție o linie modernă de Drive-Thru, concepută pentru a prelua și livra comenzile într-un timp record, direct la fereastra mașinii.</p>
+            <img src="imagini/drive.jpeg" alt="Drive Thru Fryday" class="img-full">
+        </section>
+
+        <section id="facilitati" class="container">
+            <h2>Facilități & Acces Securizat</h2>
+            <p>Pentru a asigura un mediu curat și confortabil, accesul la toaletele clienților în cadrul restaurantului se face pe baza unui <strong>cod QR unic de acces</strong>, generat automat și printat pe spatele fiecărui bon fiscal.</p>
+            <img src="imagini/toaleta-usi.jpeg" alt="Usi toaleta" class="img-full shadow">
+        </section>
+
+        <section id="mascota" class="container text-center bg-gri">
+            <h2>Mascota Oficială: Aluna! 🥜</h2>
+            <p>Un element definitoriu și amuzant al brandului este mascota sa, care amintește de ingredientul secret: uleiul de alune.</p>
+            <img src="imagini/mascota.jpeg" alt="Mascota FRYDAY" class="img-mascota">
+        </section>
+    </main>
+
+    <footer id="despre-noi">
+        <div class="container text-center">
+            <h2>Despre Noi</h2>
+            
+            <div class="introducere-proiect">
+                <p>Sunt student în anul II la Facultatea de Marketing, ASE București. Acesta este proiectul meu din cadrul disciplinei Multimedia.</p>
+            </div>
+
+            <div class="date-studenti">
+                <div class="student">
+                    <p><strong>Nume Prenume:</strong> Caras Andrei</p>
+                    <p><strong>Facultatea:</strong> ASE - Marketing</p>
+                    <p><strong>Anul:</strong> Anul 2</p>
+                    <p><strong>Grupa:</strong> Grupa 1723</p>
+                    <p><strong>Seria:</strong> Seria A</p>
+                </div>
+            </div>
+            <p style="margin-top: 20px; font-size: 0.8rem; color: #888;">© 2026 Proiect Universitar realizat în scop didactic. Toate drepturile asupra brandului aparțin FRYDAY.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

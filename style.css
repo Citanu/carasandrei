@@ -1,0 +1,432 @@
+/* ==========================================================================
+   1. RESETARE ȘI CONFIGURĂRI DE BAZĂ (Afectează toate dispozitivele)
+   ========================================================================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+:root {
+    --rosu-fryday: #E6192B;
+    --negru: #1A1A1A;
+    --gri-inchis: #333333;
+    --gri-deschis: #F4F4F4;
+    --alb: #FFFFFF;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--alb);
+    color: var(--gri-inchis);
+    line-height: 1.6;
+}
+
+/* ==========================================================================
+   2. STILURI IMPLICITE: OPTIMIZATE PENTRU MOBIL (Mobile-First)
+   ========================================================================== */
+
+/* Header & Navigație pe Mobil */
+header {
+    background-color: var(--rosu-fryday);
+    color: var(--alb);
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo {
+    font-size: 1.8rem;
+    font-weight: 900;
+    letter-spacing: -1px;
+}
+
+/* Meniul pornește ascuns pe mobil și se deschide pe verticală */
+nav ul {
+    list-style: none;
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    background-color: var(--negru);
+    text-align: center;
+    padding: 10px 0;
+}
+
+nav ul.active {
+    display: flex;
+}
+
+nav ul li {
+    padding: 15px 0;
+    border-bottom: 1px solid #333;
+}
+
+nav ul li a {
+    color: var(--alb);
+    text-decoration: none;
+    font-weight: bold;
+    text-transform: uppercase;
+    display: block;
+    width: 100%;
+}
+
+.hamburger {
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+    gap: 5px;
+}
+
+.hamburger span {
+    width: 25px;
+    height: 3px;
+    background-color: var(--alb);
+}
+
+/* Structură secțiuni pe Mobil */
+.container {
+    padding: 40px 15px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+h2 {
+    color: var(--negru);
+    margin-bottom: 20px;
+    font-size: 1.8rem;
+    text-transform: uppercase;
+    font-weight: 800;
+}
+
+.subtitlu {
+    margin-bottom: 25px;
+    color: #666;
+    font-size: 1rem;
+}
+
+.bg-gri {
+    background-color: var(--gri-deschis);
+}
+
+.text-center {
+    text-align: center;
+}
+
+/* Hero Section (Ecran mobil) */
+.hero {
+    background-image: url('imagini/fatada.jpeg');
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    color: var(--alb);
+    text-align: center;
+    border-bottom: 5px solid var(--rosu-fryday);
+}
+
+.hero-overlay {
+    background-color: rgba(0, 0, 0, 0.65);
+    padding: 80px 15px;
+}
+
+.hero h1 {
+    font-size: 2.2rem;
+    margin-bottom: 15px;
+    font-weight: 900;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
+}
+
+.hero p {
+    font-size: 1rem;
+    max-width: 700px;
+    margin: 0 auto;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.7);
+}
+
+/* Secțiunea Interactivă JavaScript (Tabs) pe Mobil */
+.tabs-prezentare {
+    display: flex;
+    flex-wrap: wrap; /* Permite așezarea pe rânduri dacă nu încap pe ecrane foarte mici */
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 25px;
+}
+
+.tab-btn {
+    background-color: var(--gri-deschis);
+    color: var(--negru);
+    border: 2px solid transparent;
+    padding: 10px 18px;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 25px;
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+    flex: 1 1 calc(33.333% - 10px); /* Împarte butoanele egal pe mobil */
+    min-width: 90px;
+}
+
+.tab-btn.active {
+    background-color: var(--rosu-fryday);
+    color: var(--alb);
+}
+
+.tab-continut {
+    display: none;
+    padding: 20px;
+    background: var(--gri-deschis);
+    border-radius: 8px;
+    border-left: 5px solid var(--rosu-fryday);
+    text-align: left;
+    font-size: 0.95rem;
+}
+
+.tab-continut.active {
+    display: block;
+}
+
+/* Secțiunea Fondator pe Mobil (Așezare verticală) */
+.fondator-flex {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    align-items: center;
+}
+
+.fondator-text h3 {
+    color: var(--rosu-fryday);
+    margin-bottom: 15px;
+    font-size: 1.2rem;
+}
+
+.fondator-text p {
+    margin-bottom: 15px;
+    text-align: justify;
+}
+
+.fondator-text blockquote {
+    font-style: italic;
+    border-left: 4px solid var(--rosu-fryday);
+    padding-left: 15px;
+    color: #555;
+    margin-top: 20px;
+    font-weight: 500;
+}
+
+.fondator-imagine-box {
+    width: 100%;
+    max-width: 320px;
+}
+
+.img-fondator-src {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+/* Galerie Imagini pe Mobil (O singură coloană lungă) */
+.grid-imagini {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    margin-top: 20px;
+}
+
+.card-imagine {
+    background: var(--alb);
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+}
+
+.card-imagine img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+}
+
+.info-imagine {
+    padding: 15px;
+    text-align: center;
+}
+
+.info-imagine h3 {
+    color: var(--negru);
+    font-size: 1.1rem;
+}
+
+/* Imagini generale (Drive-thru, Facilități, Mascotă) pe Mobil */
+.img-full {
+    width: 100%;
+    height: auto;
+    max-height: 350px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-top: 20px;
+}
+
+.shadow {
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+.img-mascota {
+    width: 100%;
+    height: auto;
+    max-height: 400px;
+    object-fit: contain;
+    border-radius: 12px;
+    margin: 20px auto 0 auto;
+    display: block;
+}
+
+/* Footer & Date Student pe Mobil */
+footer {
+    background-color: var(--negru);
+    color: var(--alb);
+    padding: 50px 15px;
+}
+
+footer h2 {
+    color: var(--rosu-fryday);
+    margin-bottom: 25px;
+}
+
+.introducere-proiect {
+    padding: 15px;
+    border: 2px dashed var(--rosu-fryday);
+    border-radius: 8px;
+    background-color: #222;
+    margin-bottom: 25px;
+}
+
+.introducere-proiect p {
+    font-style: italic;
+    font-size: 1rem;
+}
+
+.date-studenti {
+    background-color: #2a2a2a;
+    padding: 15px;
+    border-radius: 8px;
+    text-align: left;
+    width: 100%;
+}
+
+.student p {
+    margin-bottom: 6px;
+    font-size: 0.95rem;
+}
+
+
+/* ==========================================================================
+   3. ADAPTARE PENTRU ECRANE MARI (Desktop / Tablete în mod Landscape)
+   ========================================================================== */
+@media (min-width: 768px) {
+    
+    .container {
+        padding: 60px 20px;
+    }
+
+    h2 {
+        font-size: 2.2rem;
+    }
+
+    /* Meniu Orizontal pe Desktop */
+    .hamburger {
+        display: none;
+    }
+
+    nav ul {
+        display: flex;
+        flex-direction: row;
+        position: static;
+        background-color: transparent;
+        width: auto;
+        gap: 20px;
+        padding: 0;
+    }
+
+    nav ul li {
+        border-bottom: none;
+        padding: 0;
+    }
+
+    nav ul li a:hover {
+        color: var(--negru);
+    }
+
+    /* Hero Spacing mărit pe Desktop */
+    .hero-overlay {
+        padding: 160px 20px;
+    }
+
+    .hero h1 {
+        font-size: 4rem;
+    }
+
+    .hero p {
+        font-size: 1.2rem;
+    }
+
+    /* Taburile nu se mai micșorează, au dimensiune fixă */
+    .tab-btn {
+        flex: none;
+        padding: 10px 25px;
+    }
+
+    /* Modificarea secțiunii Fondator în layout pe două coloane */
+    .fondator-flex {
+        flex-direction: row;
+        justify-content: space-between;
+        text-align: left;
+        gap: 40px;
+    }
+
+    .fondator-text {
+        flex: 1;
+    }
+
+    .fondator-imagine-box {
+        flex: 0 0 300px;
+    }
+
+    /* Gridul de imagini trece pe 3 coloane perfect aliniate */
+    .grid-imagini {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 30px;
+    }
+
+    /* Adaptare înălțimi imagini generale pe Desktop */
+    .img-full {
+        max-height: 500px;
+    }
+
+    .img-mascota {
+        max-height: 500px;
+    }
+
+    /* Încheiere casetă date student */
+    .date-studenti {
+        width: auto;
+        display: inline-block;
+        padding: 20px 40px;
+    }
+}
+.text-box-brand p {
+    margin-bottom: 15px;
+    text-align: justify;
+}
